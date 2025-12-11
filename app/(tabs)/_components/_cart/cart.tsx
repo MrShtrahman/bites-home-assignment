@@ -3,12 +3,12 @@ import { useState } from 'react';
 import { Alert, FlatList, RefreshControl, Text } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useTheme } from 'styled-components/native';
-import { selectCartItems, selectCartTotal, selectIsCartEmpty } from '../_features/cart/cartSelectors';
-import { decrementItemQuantity, incrementItemQuantity, removeFromCart } from '../_features/cart/cartSlice';
-import { placeOrderRequest } from '../_features/orders/ordersSlice';
-import { useAppDispatch, useAppSelector } from '../_store/hooks';
-import CartItem from './_components/_cart/CartItem';
-import CartSummary from './_components/_cart/CartSummary';
+import { selectCartItems, selectCartTotal, selectIsCartEmpty } from '../../../_features/cart/cartSelectors';
+import { decrementItemQuantity, incrementItemQuantity, removeFromCart } from '../../../_features/cart/cartSlice';
+import { placeOrderRequest } from '../../../_features/orders/ordersSlice';
+import { useAppDispatch, useAppSelector } from '../../../_store/hooks';
+import CartItem from './_cartItem/CartItem';
+import CartSummary from './_cartSummary/CartSummary';
 import * as S from './cart.styles';
 
 const CartScreen = () => {
