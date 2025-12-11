@@ -7,8 +7,8 @@ import { selectCartItems, selectCartTotal, selectIsCartEmpty } from '../_feature
 import { decrementItemQuantity, incrementItemQuantity, removeFromCart } from '../_features/cart/cartSlice';
 import { placeOrderRequest } from '../_features/orders/ordersSlice';
 import { useAppDispatch, useAppSelector } from '../_store/hooks';
-import { CartItem } from './_components/_cart/CartItem';
-import { CartSummary } from './_components/_cart/CartSummary';
+import CartItem from './_components/_cart/CartItem';
+import CartSummary from './_components/_cart/CartSummary';
 import * as S from './cart.styles';
 
 const CartScreen = () => {

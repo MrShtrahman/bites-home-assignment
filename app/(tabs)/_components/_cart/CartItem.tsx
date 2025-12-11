@@ -8,7 +8,7 @@ interface CartItemProps {
     onRemove: () => void;
 }
 
-export const CartItem = ({
+const CartItem = ({
     item,
     onIncrement,
     onDecrement,
@@ -46,6 +46,8 @@ export const CartItem = ({
         </Container>
     );
 };
+
+export default CartItem;
 
 const Container = styled.View`
   flex-direction: row;

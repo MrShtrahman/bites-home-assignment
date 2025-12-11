@@ -6,7 +6,7 @@ interface CartSummaryProps {
   total: number;
 }
 
-export const CartSummary = ({
+const CartSummary = ({
   total,
 }: CartSummaryProps) => {
   const subtotal = useAppSelector(selectCartSubtotal);
@@ -30,6 +30,8 @@ export const CartSummary = ({
     </Container>
   )
 };
+
+export default CartSummary;
 
 const Container = styled.View`
   background-color: ${props => props.theme.colors.background};

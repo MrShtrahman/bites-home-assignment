@@ -1,9 +1,9 @@
 import { styled } from 'styled-components/native';
-import { CategoryFilters } from './CategoryFilters';
-import { SearchBar } from './SearchBar';
-import { SortSelector } from './SortSelector';
+import CategoryFilters from './CategoryFilters';
+import SearchBar from './SearchBar';
+import SortSelector from './SortSelector';
 
-export const ProductsHeader = () => (
+const ProductsHeader = () => (
     <Container>
         <Title>Products</Title>
 
@@ -13,7 +13,9 @@ export const ProductsHeader = () => (
 
         <SortSelector />
     </Container>
-)
+);
+
+export default ProductsHeader;
 
 const Container = styled.View`
   background-color: ${props => props.theme.colors.background};

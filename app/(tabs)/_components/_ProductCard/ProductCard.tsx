@@ -44,4 +44,4 @@ const ProductCardComponent = ({ product, onPress }: ProductCardProps) => {
     );
 };
 
-export const ProductCard = memo(ProductCardComponent);
+export default memo(ProductCardComponent);

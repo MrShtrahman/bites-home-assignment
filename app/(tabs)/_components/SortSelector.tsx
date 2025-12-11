@@ -13,7 +13,7 @@ const SORT_OPTIONS = [
     { value: SortOption.RATING_DESC, label: 'Top Rated' },
 ];
 
-export const SortSelector = () => {
+const SortSelector = () => {
     const dispatch = useAppDispatch();
     const selectedSort = useAppSelector(selectSortBy);
     const [isOpen, setIsOpen] = useState(false);
@@ -53,6 +53,8 @@ export const SortSelector = () => {
         </>
     );
 };
+
+export default SortSelector;
 
 const Button = styled.TouchableOpacity`
   flex-direction: row;

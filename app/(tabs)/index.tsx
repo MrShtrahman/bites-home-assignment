@@ -5,8 +5,8 @@ import { useTheme } from 'styled-components/native';
 import { selectProductsLoading } from '../_features/products/productsSelectors';
 import { fetchProductsRequest } from '../_features/products/productsSlice';
 import { useAppDispatch, useAppSelector } from '../_store/hooks';
-import { ProductsHeader } from './_components/ProductsHeader';
-import { ProductsList } from './_components/ProductsList';
+import ProductsHeader from './_components/ProductsHeader';
+import ProductsList from './_components/ProductsList';
 import * as S from './index.styles';
 
 const ProductsListScreen = () => {
