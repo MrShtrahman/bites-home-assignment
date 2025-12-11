@@ -7,9 +7,9 @@ import { selectFilters, selectHasMore, selectPagination, selectProducts, selectP
 import { fetchProductsRequest } from '../../_features/products/productsSlice';
 import { Product } from '../../_shared/types';
 import { useAppDispatch, useAppSelector } from '../../_store/hooks';
-import ProductCard from './_ProductCard/ProductCard';
+import { ProductCard } from './_ProductCard/ProductCard';
 
-const ProductsList = () => {
+export const ProductsList = () => {
     const dispatch = useAppDispatch();
     const theme = useTheme();
     const router = useRouter();
@@ -20,7 +20,7 @@ const ProductsList = () => {
     const isLoadingMore = useAppSelector(selectProductsLoadingMore);
     const hasMore = useAppSelector(selectHasMore);
     const pagination = useAppSelector(selectPagination);
-
+    
     const onRefresh = useCallback(() => {
         dispatch(fetchProductsRequest({
             page: 1,
@@ -98,8 +98,6 @@ const ProductsList = () => {
         />
     );
 };
-
-export default ProductsList;
 
 const LoadMoreContainer = styled.View`
   padding: 20px;

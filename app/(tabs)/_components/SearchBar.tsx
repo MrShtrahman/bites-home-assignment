@@ -4,7 +4,7 @@ import { selectSearchQuery } from '../../_features/products/productsSelectors';
 import { setSearchQuery } from '../../_features/products/productsSlice';
 import { useAppDispatch, useAppSelector } from '../../_store/hooks';
 
-const SearchBar = () => {
+export const SearchBar = () => {
     const theme = useTheme();
     const dispatch = useAppDispatch();
     const searchQuery = useAppSelector(selectSearchQuery);
@@ -24,8 +24,6 @@ const SearchBar = () => {
         </Container>
     );
 };
-
-export default SearchBar;
 
 const Container = styled.View`
   margin-bottom: 12px;

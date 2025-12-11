@@ -6,7 +6,7 @@ import { toggleCategoryFilter } from '../../_features/products/productsSlice';
 import { ProductCategory } from '../../_shared/types';
 import { useAppDispatch, useAppSelector } from '../../_store/hooks';
 
-const CategoryFilters = () => {
+export const CategoryFilters = () => {
     const dispatch = useAppDispatch();
     const { categories } = useAppSelector(selectFilters);
     
@@ -32,8 +32,6 @@ const CategoryFilters = () => {
     </ScrollView>
     )
 };
-
-export default CategoryFilters;
 
 const Container = styled.View`
   flex-direction: row;
